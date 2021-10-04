@@ -56,11 +56,11 @@ def plot_sampled_survivorship(plane, anchor_points, accept, marker, color, size,
 
 
 st.markdown("## Build your own survivorship bias plane!")
-st.markdown("#### More on [survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias#In_the_military)")
+st.markdown("#### More on [survivorship bias](https://en.wikipedia.org/wiki/Survivorship_bias#In_the_military) and the famous data science plane.")
 
-st.markdown("Markers from the Matplotlib API")
-marker = st.selectbox('Pick a mark!', ('o', 'v', 'X',"D","d","<"), format_func=(lambda x: "Mark type " + str(x)))
-color = st.selectbox('Pick a color!', ('green', 'blue', 'purple','yellow','magenta','orange'), format_func=(lambda x: "Color " + str(x)))
+st.markdown("Markers from the [Matplotlib API](https://matplotlib.org/stable/api/markers_api.html)")
+marker = st.selectbox('Pick a marker!', ('o', 'v', 'X',"D","d","<"), format_func=(lambda x: "Marker:  " + str(x)))
+color = st.selectbox('Pick a color!', ('green', 'blue', 'purple','yellow','magenta','orange'), format_func=(lambda x: "Color: " + str(x)))
 size = st.selectbox('Pick a dot size!', (100,200,300,400,500))
 
 anchor_img = extract_anchor_img(red, 1)
@@ -69,8 +69,8 @@ anchor_points = get_anchor_points(anchor_img)
 hull = Delaunay(anchor_points)
 img = plot_sampled_survivorship(plane, anchor_points, accept,marker,color,size)
 
-st.markdown("### Riff by [Vicki](http://www.vickiboykis.com), Original Code by [Generativist](https://twitter.com/generativist)")
- 
+st.markdown("### Original Code by [JBN](https://twitter.com/generativist),Riff by [Vicki](http://www.vickiboykis.com)")
+st.markdown("[GitHub Repo](https://github.com/veekaybee/plane_lmao)")
 
 
 
